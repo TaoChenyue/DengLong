@@ -185,11 +185,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.widget)
 
+        self.info = QLabel(self.centralwidget)
+        self.info.setObjectName(u"info")
+
+        self.verticalLayout.addWidget(self.info)
+
         MainWindow.setCentralWidget(self.centralwidget)
         QWidget.setTabOrder(self.Bstart, self.Bstop)
-        QWidget.setTabOrder(self.Bstop, self.vA)
-        QWidget.setTabOrder(self.vA, self.vE1)
-        QWidget.setTabOrder(self.vE1, self.vE2)
+        QWidget.setTabOrder(self.Bstop, self.vE1)
+        QWidget.setTabOrder(self.vE1, self.vA)
+        QWidget.setTabOrder(self.vA, self.vE2)
         QWidget.setTabOrder(self.vE2, self.vE3)
         QWidget.setTabOrder(self.vE3, self.vSH)
 
@@ -205,14 +210,9 @@ class Ui_MainWindow(object):
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"E2", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"E3", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Shift", None))
-        self.Block.setText(QCoreApplication.translate("MainWindow", u"\u53c2\u6570\u8c03\u6574/\u9501\u5b9a", None))
+        self.Block.setText(QCoreApplication.translate("MainWindow", u"\u53c2\u6570", None))
         self.Bstart.setText(QCoreApplication.translate("MainWindow", u"\u542f\u52a8", None))
-#if QT_CONFIG(shortcut)
-        self.Bstart.setShortcut(QCoreApplication.translate("MainWindow", u"1", None))
-#endif // QT_CONFIG(shortcut)
         self.Bstop.setText(QCoreApplication.translate("MainWindow", u"\u5173\u95ed", None))
-#if QT_CONFIG(shortcut)
-        self.Bstop.setShortcut(QCoreApplication.translate("MainWindow", u"2", None))
-#endif // QT_CONFIG(shortcut)
+        self.info.setText(QCoreApplication.translate("MainWindow", u"info", None))
     # retranslateUi
 

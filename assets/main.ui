@@ -287,7 +287,7 @@
        <item>
         <widget class="QPushButton" name="Block">
          <property name="text">
-          <string>参数调整/锁定</string>
+          <string>参数</string>
          </property>
         </widget>
        </item>
@@ -296,9 +296,6 @@
          <property name="text">
           <string>启动</string>
          </property>
-         <property name="shortcut">
-          <string>1</string>
-         </property>
         </widget>
        </item>
        <item>
@@ -306,12 +303,16 @@
          <property name="text">
           <string>关闭</string>
          </property>
-         <property name="shortcut">
-          <string>2</string>
-         </property>
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="info">
+      <property name="text">
+       <string>info</string>
+      </property>
      </widget>
     </item>
    </layout>
@@ -320,8 +321,8 @@
  <tabstops>
   <tabstop>Bstart</tabstop>
   <tabstop>Bstop</tabstop>
-  <tabstop>vA</tabstop>
   <tabstop>vE1</tabstop>
+  <tabstop>vA</tabstop>
   <tabstop>vE2</tabstop>
   <tabstop>vE3</tabstop>
   <tabstop>vSH</tabstop>
