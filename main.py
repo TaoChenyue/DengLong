@@ -13,12 +13,17 @@ _keyboard=keyboard.Controller()
 _mouse=mouse.Controller()
 
 key_names=['A','E1','E2','E3','SH']
-key_triggers=['f','r','t','v','alt_gr']
+key_triggers=['x','r','t','v','alt_gr']
 
 config_ini = QSettings('config.ini',QSettings.IniFormat)
 if not os.path.exists('config.ini'):
-    for name in key_names:
+    for name,trg in zip(key_names,key_triggers):
         config_ini.setValue(name,0)
+        config_ini.setValue(name+'_key',trg)
+else:
+    for index,name in enumerate(key_names):
+        key_triggers[index]=config_ini.value(name+'_key')
+        
 
 def IsSameKey(key,char):
     if hasattr(keyboard.Key,char):

@@ -35,7 +35,7 @@ IS_BLOCK=0
 
 ### Nuitka 打包
 ```
-python -m nuitka --onefile --windows-disable-console --enable-plugin=pyside6 --windows-icon-from-ico=favicon.ico --windows-uac-admin --output-dir=output main.py
+python -m nuitka --onefile --windows-disable-console --enable-plugin=pyside6 --windows-icon-from-ico=favicon.ico --windows-uac-admin -o DengLong/DengLong.exe --output-dir=DengLong --remove-output main.py
 ```
 
 ### 其它
